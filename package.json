@@ -16,5 +16,8 @@
     "gatsby": "2.32.4",
     "graphql": "15.5.0",
     "nexus": "1.0.0"
+  },
+  "devDependencies": {
+    "nuxt": "2.15.2"
   }
 }
