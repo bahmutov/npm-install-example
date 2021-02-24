@@ -8,11 +8,21 @@ jobs:
       - uses: actions/checkout@v2
       - run: npm ci
 
+  no-caching-yarn:
+    runs-on: ubuntu-20.04
+    name: no caching yarn
+    steps:
+      - uses: actions/checkout@v2
+      - run: rm package-lock.json
+      - run: yarn install
+
   npm-install:
     runs-on: ubuntu-20.04
     name: using npm-install
     steps:
       - uses: actions/checkout@v2
+      # make sure to use npm command
+      - run: rm yarn.lock
       - uses: bahmutov/npm-install@v1
 
   # experimenting with commands
@@ -22,6 +32,17 @@ jobs:
     name: using npm command
     steps:
       - uses: actions/checkout@v2
+      # make sure to use npm command
+      - run: rm yarn.lock
       - uses: bahmutov/npm-install@v1
         with:
           install-command: npm ci --prefer-offline --no-audit
+
+  npm-install-yarn:
+    runs-on: ubuntu-20.04
+    name: using npm-install with yarn
+    steps:
+      - uses: actions/checkout@v2
+      # make sure to use yarn command
+      - run: rm package-lock.json
+      - uses: bahmutov/npm-install@v1
