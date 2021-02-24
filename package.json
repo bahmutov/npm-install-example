@@ -20,6 +20,9 @@
     "react-dom": "16.14.0"
   },
   "devDependencies": {
-    "nuxt": "2.15.2"
+    "nuxt": "2.15.2",
+    "parcel": "1.12.4",
+    "prettier": "2.2.1",
+    "typescript": "4.2.2"
   }
 }
