@@ -14,3 +14,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: bahmutov/npm-install@v1
+
+  # experimenting with commands
+  # http://www.tiernok.com/posts/2019/faster-npm-installs-during-ci/
+  npm-install-offline:
+    runs-on: ubuntu-20.04
+    name: using npm command
+    steps:
+      - uses: actions/checkout@v2
+      - uses: bahmutov/npm-install@v1
+        with:
+          install-command: npm ci --prefer-offline --no-audit
