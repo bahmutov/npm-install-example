@@ -1,0 +1,16 @@
+name: main
+on: [push]
+jobs:
+  no-caching:
+    runs-on: ubuntu-20.04
+    name: no caching
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm ci
+
+  npm-install:
+    runs-on: ubuntu-20.04
+    name: using npm-install
+    steps:
+      - uses: actions/checkout@v2
+      - uses: bahmutov/npm-install@v1

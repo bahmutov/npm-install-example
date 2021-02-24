@@ -1,0 +1,18 @@
+{
+  "name": "npm-install-example",
+  "version": "1.0.0",
+  "description": "Timing the bahmutov/npm-install GitHub action",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gatsby": "2.32.4",
+    "graphql": "15.5.0",
+    "nexus": "1.0.0"
+  }
+}
