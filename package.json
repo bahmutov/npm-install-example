@@ -23,6 +23,9 @@
     "react-dom": "16.14.0"
   },
   "devDependencies": {
+    "apollo-boost": "0.4.9",
+    "esprima": "4.0.1",
+    "graphql-tag": "2.11.0",
     "nuxt": "2.15.2",
     "parcel": "1.12.4",
     "prettier": "2.2.1",
